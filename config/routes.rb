@@ -1,6 +1,7 @@
 SampleApp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :teachers
   #get "users/new"
 
   root to: 'static_pages#home'
@@ -16,6 +17,8 @@ SampleApp::Application.routes.draw do
   get "static_pages/index"
   get "static_pages/server_ip"
   get "static_pages/google"
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

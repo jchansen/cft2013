@@ -61,4 +61,8 @@ describe "UserPages" do
     end
 
   end
+
+  describe "edit page" do
+  let(:user)
+  end
 end

@@ -19,6 +19,7 @@
   <%= yield %>
   <h2 id="featured-teachers">Featured Teachers</h2>
   <div class="container">
+<<<<<<< HEAD
     <div class="teacher-item">
       <a href="teachers"><img src="assets/teacher-1.jpg"></a>
       <div><b>Mrs. Hebert</b></div>
@@ -43,12 +44,21 @@
       <div>Desert Springs Academy</div>
       <div>Grade 8</div>
     </div>
+=======
+    <% flash.each do |key, value| %>
+        <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+    <% end %>
+    <%= yield %>
   </div>
   <div class="container">
     <%= render 'layouts/footer' %>
     <%#= debug(params) if Rails.env.development? %>
     <%#= debug(request) if Rails.env.development? %>
+>>>>>>> 62b7d3c7bb7804c6971a5348948833cd3a3ca1d5
   </div>
+  <%= render 'layouts/footer' %>
+  <%= debug(params) if Rails.env.development? %>
+  <%#= debug(request) if Rails.env.development? %>
 </div>
 
 </body>

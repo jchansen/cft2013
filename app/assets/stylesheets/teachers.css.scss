@@ -3,6 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .container {
 	width: 970px;
+	position: relative;
 }
 
 .profile {
@@ -70,7 +71,7 @@
 }
 
 #endorse-bar {
-	position: fixed;
-	right: 14%;
-	top: 70px;
+	position: absolute;
+	right: 20px;
+	top: 30px;
 }

@@ -10,6 +10,27 @@ $grayMediumLight: #eaeaea;
   box-sizing: border-box;
 }
 
+/* homepage */
+.hero-unit {
+  padding: 0px;
+  margin-bottom: 30px;
+  background-color: #eeeeee;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+#featured-teachers {
+  font-family: 'Industria W01 Solid';
+  font-size: 4em;
+  color: #3C7686;
+}
+.teacher-item {
+  float:left;
+  font-size:0.8em;
+  padding: 8px;
+}
+
 /* universal */
 
 html {

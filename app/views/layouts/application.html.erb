@@ -13,17 +13,40 @@
 <%= render 'layouts/header' %>
 
 <div class="container">
+  <% flash.each do |key, value| %>
+      <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+  <% end %>
+  <%= yield %>
+  <h2 id="featured-teachers">Featured Teachers</h2>
   <div class="container">
-    <% flash.each do |key, value| %>
-        <%= content_tag(:div, value, class: "alert alert-#{key}") %>
-    <% end %>
-    <%= yield %>
+    <div class="teacher-item">
+      <a href="teachers"><img src="assets/teacher-1.jpg"></a>
+      <div><b>Mrs. Hebert</b></div>
+      <div>Canyon del Oro High School</div>
+      <div>Grade 9, 10</div>
+    </div>
+    <div class="teacher-item">
+      <img src="assets/teacher-3.jpg">
+      <div><b>Ms Smith</b></div>
+      <div>Gale Elementary</div>
+      <div>Grade 8</div>
+    </div>
+    <div class="teacher-item">
+      <img src="assets/teacher-2.jpg">
+      <div><b>Mr Robinson</b></div>
+      <div>Copper Creek High School</div>
+      <div>Grade 8</div>
+    </div>
+    <div class="teacher-item">
+      <img src="assets/teacher-4.jpg">
+      <div><b>Mr Johnson</b></div>
+      <div>Desert Springs Academy</div>
+      <div>Grade 8</div>
+    </div>
   </div>
-  <div class="container">
-    <%= render 'layouts/footer' %>
-    <%= debug(params) if Rails.env.development? %>
-    <%#= debug(request) if Rails.env.development? %>
-  </div>
+  <%= render 'layouts/footer' %>
+  <%= debug(params) if Rails.env.development? %>
+  <%#= debug(request) if Rails.env.development? %>
 </div>
 
 </body>

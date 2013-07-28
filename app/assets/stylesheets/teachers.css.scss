@@ -25,11 +25,20 @@
 
    h1, h2, h3, p, img, ul {
    	  text-align: left;
-      margin-bottom:10px;
    }
+
+   h1, h2, h3 {
+   	margin: 15px 0 0;
+   }
+
+   p {
+   	margin: 0 0 15px;
+   	font-size: 12px;
+   }
+
    h1 {
       color:#3c7686;
-      font-size:1.3em;
+      font-size: 44px;
       margin-bottom:10px;
    }
    img {

@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .container {
-	width: 1120px;
+	width: 850px;
 }
 
 .profile {
@@ -14,8 +14,8 @@
 }
 
 .content {
-	float: right;
-	max-width: 75%;
+	float: left;
+	max-width: 70%;
 	padding:10px 0 10px 10px;
 }
 
@@ -69,4 +69,8 @@
 
 }
 
-
+#endorse-bar {
+	position: fixed;
+	right: 13%;
+	top: 70px;
+}

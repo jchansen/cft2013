@@ -1,12 +1,31 @@
 <% provide(:title, @user.name) %>
 
-<div class="row">
-  <aside class="span4">
-    <section>
-      <h1>
-        <%= gravatar_for @user, size: 100 %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
+<!--<div class="row">-->
+  <!--<aside class="span4">-->
+    <!--<section>-->
+      <!--<h1>-->
+        <!--<%= gravatar_for @user, size: 200 %>-->
+        <!--<%= @user.name %>-->
+      <!--</h1>-->
+    <!--</section>-->
+  <!--</aside>-->
+<!--</div>-->
+
+<div class="profile details">
+  <%= gravatar_for @user, size: 200 %>
+  <h1/><%= @user.name %></h1>
+  <h2>Teaching at</h2>
+  <p><%= @user.teaching_at %></p>
+  <h2>Credentials</h2>
+  <p><%= @user.credentials %></p>
+  <h2>Years of Experience</h2>
+  <p><%= @user.year_of_experience %></p>
+  <h2>Grade Level</h2>
+  <p><%= @user.grade_level %></p>
+</div>
+
+<div class="content details">
+  <img src="assets/class-pic"/>
+  <h2>My Story</h2>
+  <p><%= @user.story %></p>
 </div>

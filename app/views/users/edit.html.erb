@@ -18,6 +18,21 @@
         <%= f.label :password_confirmation, "Confirm Password" %>
         <%= f.password_field :password_confirmation %>
 
+        <%= f.label :teaching_at %>
+        <%= f.text_field :teaching_at %>
+
+        <%= f.label :credentials %>
+        <%= f.text_field :credentials %>
+
+        <%= f.label :year_of_experience %>
+        <%= f.text_field :year_of_experience %>
+
+        <%= f.label :grade_level %>
+        <%= f.text_field :grade_level %>
+
+        <%= f.label :story %>
+        <%= f.text_field :story %>
+
         <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>
 

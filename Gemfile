@@ -1,5 +1,10 @@
 source 'https://rubygems.org'
 
+if RUBY_VERSION =~ /1.9/ # assuming you're running Ruby ~1.9
+  Encoding.default_external = Encoding::UTF_8
+  Encoding.default_internal = Encoding::UTF_8
+end
+
 gem 'rails', '3.2.13'
 gem 'bootstrap-sass', '2.1'
 gem 'bcrypt-ruby', '3.0.1'

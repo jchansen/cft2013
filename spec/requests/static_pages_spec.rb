@@ -8,7 +8,7 @@ describe "StaticPages" do
 
     before { visit root_path }
 
-    it { should have_selector('h1',    text: 'Sample App') }
+    it { should have_selector('h1',    text: 'Teacher Boost') }
     it { should have_selector('title', text: full_title("")) }
     it { should_not have_selector 'title', text: '| Home' }
   end
@@ -47,7 +47,7 @@ describe "StaticPages" do
     click_link "Home"
     click_link "Sign up now!"
     page.should have_selector 'title', text: full_title('Sign up')
-    click_link "sample app"
-    page.should have_selector 'h1', text: 'Sample App'
+    click_link "teacher boost"
+    page.should have_selector 'h1', text: 'Teacher Boost'
   end
 end

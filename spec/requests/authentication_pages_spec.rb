@@ -38,6 +38,7 @@ describe "AuthenticationPages" do
       it { should have_selector('title', text: user.name) }
       it { should have_link('Profile', href: user_path(user)) }
       it { should have_link('Sign out', href: signout_path) }
+      it { should have_link('Settings', href: edit_user_path(user)) }
       it { should_not have_link('Sign in', href: signin_path(user)) }
 
       describe "followed by signout" do
@@ -45,6 +46,24 @@ describe "AuthenticationPages" do
         it { should have_link('Sign in') }
       end
 
+    end
+  end
+
+  describe "authorization" do
+
+    describe "for non-signed-in users" do
+      let(:user) { FactoryGirl.create(:user) }
+
+      describe "in the Users controller" do
+
+        describe "visiting the edit page" do
+
+          before { visit edit_user_path(user) }
+          it { should have_selector('title', text: 'Sign in') }
+          it { should have_selector('div.alert.alert-notice') }
+
+        end
+      end
     end
   end
 end

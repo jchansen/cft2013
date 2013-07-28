@@ -1,31 +1,64 @@
 <% provide(:title, @user.name) %>
 
 <!--<div class="row">-->
-  <!--<aside class="span4">-->
-    <!--<section>-->
-      <!--<h1>-->
-        <!--<%= gravatar_for @user, size: 200 %>-->
-        <!--<%= @user.name %>-->
-      <!--</h1>-->
-    <!--</section>-->
-  <!--</aside>-->
+<!--<aside class="span4">-->
+<!--<section>-->
+<!--<h1>-->
+<!--<%= gravatar_for @user, size: 200 %>-->
+<!--<%= @user.name %>-->
+<!--</h1>-->
+<!--</section>-->
+<!--</aside>-->
 <!--</div>-->
 
 <div class="profile details">
   <%= gravatar_for @user, size: 200 %>
   <h1/><%= @user.name %></h1>
   <h2>Teaching at</h2>
+
   <p><%= @user.teaching_at %></p>
+
   <h2>Credentials</h2>
+
   <p><%= @user.credentials %></p>
+
   <h2>Years of Experience</h2>
+
   <p><%= @user.year_of_experience %></p>
+
   <h2>Grade Level</h2>
+
   <p><%= @user.grade_level %></p>
 </div>
 
 <div class="content details">
-  <img src="assets/class-pic"/>
+  <% if @user.name == "Mrs. Hebert" %>
+      <div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
+        <div class="carousel-inner">
+          <div class="item active"><!-- class of active since it's the first item -->
+            <img src="assets/trish_02.jpg" alt=""/>
+
+            <div class="carousel-caption">
+              <p>Caption text here</p>
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/trish_03.jpg" alt=""/>
+
+            <div class="carousel-caption">
+              <p>Caption text here</p>
+            </div>
+          </div>
+        </div>
+        <!-- /.carousel-inner -->
+        <!--  Next and Previous controls below
+              href values must reference the id for this carousel -->
+        <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
+      </div>
+      <!-- /.carousel -->
+  <% end %>
   <h2>My Story</h2>
+
   <p><%= @user.story %></p>
 </div>

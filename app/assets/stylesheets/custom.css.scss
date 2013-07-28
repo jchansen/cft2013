@@ -73,7 +73,8 @@ p {
   font-weight: normal;
   color: white;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding: 9px 35px 0 0;
+  background: url('logo-blast.png') no-repeat right center;
   font-weight: bold;
   line-height: 1;
   &:hover {

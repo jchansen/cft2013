@@ -80,6 +80,16 @@ p {
     text-decoration: none;
   }
 }
+#header {
+  background-color: #3C7686;
+}
+#header .nav > li > a {
+  color: #FFFFFF;
+}
+#header .nav > li > a:hover {
+  background-color: #3C7686;
+  color: #999999;
+}
 
 /* footer */
 
